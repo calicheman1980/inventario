@@ -1,0 +1,226 @@
+/* 
+    Document   : estilosFormularios
+    Created on : 14/03/2013, 12:55:04 PM
+    Author     : USUARIO
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.clear{
+   
+    padding: 20px;
+}
+.formu{
+    /*Tamaño*/
+    width: 500px;
+    /*alinea en el centro de la pagina*/
+    margin: auto;
+    background-color: lightblue; 
+}
+.inicioSesion{
+    /*Tamaño*/
+    width: 300px;
+    /*alinea en el centro de la pagina*/
+    margin: auto;
+    /*Color de fondo del inicio de sesion*/ 
+}
+.inicioSesion fieldset{
+    
+    border-color: darkblue;
+    border-spacing: 10px;
+    /*color de fondo de los formularios*/
+    background-color: #34AAFF;
+    
+}
+
+span.frmInicioSesion label{
+    float: left;
+    
+}
+span.frmInicioSesion input{
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border: 1px solid #BDC2C9;
+    float: right;
+}
+.inicioSesion legend{
+    border: 2px solid #FFF;
+    color: #fff;
+    background-color: darkblue;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+}
+
+#frm{
+    border-color: darkblue;
+    border-spacing: inherit;
+    /*color de fondo de los formularios*/
+    background-color: #34AAFF;
+}
+
+#frm legend{
+    border: 2px solid #FFF;
+    color: #fff;
+    background-color: darkblue;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+}
+#frm input[type=text] {
+    border: none;
+    height: 20px;
+    width: 260px;
+    font-size:16px;
+    box-shadow: 1px 1px 20px 5px #D6D6D6;
+    moz-box-shadow: 1px 1px 20px 5px #D6D6D6;
+    webkit-box-shadow: 1px 1px 20px 5px #D6D6D6;
+    float: none;
+}
+#frm input[type=password] {
+    border: none;
+    height: 20px;
+    width: 260px;
+    font-size:16px;
+    box-shadow: 1px 1px 20px 5px #D6D6D6;
+    moz-box-shadow: 1px 1px 20px 5px #D6D6D6;
+    webkit-box-shadow: 1px 1px 20px 5px #D6D6D6;
+    float: none;
+}
+#frm ol li label[id=titulo]{
+    width:200px;
+    float: left;
+}
+
+#frm ol li label[id=titulo_4]{
+    width:220px;
+    float: left;
+}
+
+#frm ol{
+    list-style:none;
+}
+#frm ol li{
+    padding-bottom: 10px;
+}
+
+.error{
+    color: red;
+}
+#frm select {
+    border: none;
+    height: 20px;
+    width: 160px;    
+}
+#frm select[id=grSan] {
+    border: none;
+    height: 20px;
+    width: 160px;    
+}
+
+#frm select[id=categ] {
+    border: none;
+    height: 20px;
+    width: 200px;    
+}
+
+#frm select[id=mrc] {
+    border: none;
+    height: 20px;
+    width: 160px;    
+}
+#frm select[id=tpcomb] {
+    border: none;
+    height: 20px;
+    width: 240px;    
+}
+
+#frm select[id=tpveh] {
+    border: none;
+    height: 20px;
+    width: 240px;    
+}
+
+#frm select[id=lna] {
+    border: none;
+    height: 20px;
+    width: 160px;    
+}
+
+#frm select[id=rh] {
+    border: none;
+    height: 20px;
+    width: 50px;    
+}
+#frm select[id=tComb] {
+    border: none;
+    height: 20px;
+    width: 200px;    
+}
+#frm select[id=aseguradora] {
+    border: none;
+    height: 20px;
+    width: 220px;    
+}
+#frm select[id=sistema] {
+    border: none;
+    height: 20px;
+    width: 230px;    
+}
+#frm select[id=detalleSistema] {
+    border: none;
+    height: 20px;
+    width: 230px;    
+}
+#frm select[id=SEG_id] {
+    border: none;
+    height: 20px;
+    width: 220px;    
+}
+#frm input[id=campo_fecha]
+{
+    border: none;
+   height: 20px;
+    width: 100px;    
+}
+
+#frm input[id=EMP_fecha_vencimiento]
+{
+    border: none;
+   height: 20px;
+    width: 100px;    
+}
+
+#frm input[id=venci_lice]
+{
+    border: none;
+   height: 20px;
+    width: 100px; 
+    
+}
+
+#frm input[id=fecha_inicial]
+{
+    border: none;
+   height: 20px;
+    width: 100px; 
+    
+}
+
+#frm input[id=fecha_final]
+{
+    border: none;
+   height: 20px;
+    width: 100px; 
+    
+}
+#frm div[id=lineaA]{
+    width: 80px;
+    
+    
+}

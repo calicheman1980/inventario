@@ -1,0 +1,44 @@
+<?php
+
+
+?>
+<br/>
+<center>
+    <table border="0">
+       <tr>
+            <td>
+                <form id="formu" method="post" action="">
+
+                    <fieldset id="frm"><legend>MODIFICAR PRODUCTO</legend>
+                    <ol>
+                        <li><label id="titulo">*NOMBRE: </label><input type="text" name="nombre" value="<?php if(isset($this->datos['nombre'])) echo $this->datos['nombre'];?>"/></li>
+                        <li><label id="titulo">*REFERENCIA: </label> <input type="text" name="referencia" value="<?php if(isset($this->datos['referencia'])) echo $this->datos['referencia'];?>"/></li>
+                        <li><label id="titulo">*PESO: </label> <input type="text" name="peso" value="<?php if(isset($this->datos['peso'])) echo $this->datos['peso'];?>"/></li>
+                        <li><label id="titulo">STOCK: </label> <?php if(isset($this->datos['stock'])) echo $this->datos['stock'];?></li>
+                        <li><label id="titulo">SUMAR A STOCK: </label> <input type="text" name="stock" value="0"/></li>
+                        <li><label id="titulo">CATEGORIA: </label>
+                            <select name="categoria">
+                                <option value="">SELECCIONE CATEGORIA</option>
+                                <?php for($i=0; $i<count($this->categoria); $i++): ?>
+                                <option value="<?php echo $this->categoria[$i]['id']; ?>" <?php echo ($this->categoria[$i]['id']==$this->datos['idCategoria']?'selected':'')?> ><?php echo $this->categoria[$i]['nombre']; ?></option>
+                                <?php endfor;?>
+                            </select>
+                        </li>
+                        <li><label id="titulo">ESTADO: </label>
+                             <select name="estado">
+                                <option value="0" <?php echo ($this->datos['estado']==0?'selected':'')?> >Activo</option>
+                                <option value="1" <?php echo ($this->datos['estado']==1?'selected':'')?> >Inactivo</option>
+                                <option value="2" <?php echo ($this->datos['estado']==2?'selected':'')?> >Eliminado</option>
+                            </select>
+                        </li>
+                        <input type="hidden" name="guardar" value="1"/>
+                        <input type="hidden" name="id" value="<?=$this->datos['id'];?>"/>
+                        <input type="hidden" name="oldstock" value="<?=$this->datos['stock'];?>"/>
+                        <li><center><input type="submit" name="regProducto" value="GUARDAR"/></center></li>
+                    </ol>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+</center>

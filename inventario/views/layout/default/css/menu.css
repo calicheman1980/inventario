@@ -1,0 +1,84 @@
+/* 
+    Document   : menu
+    Created on : 13/03/2013, 01:41:54 PM
+    Author     : USUARIO
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#barraHorizontal { 
+    width: 960px;
+    margin: auto;
+    background-color: #4ba;
+    height: 30px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 5px #000 inset;
+    position: relative;
+    z-index:2;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+#menu>li{
+    display: inline-block;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+}
+.panel{
+    background-color: rgb(7%, 42%, 38%);
+    color: #fff;
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #000 inset;
+    box-shadow: 0px, 0px, 5px, #000;
+    padding-top: 100px;
+    position: relative;
+    trasnsform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+    top: -250px;
+}
+
+.panel:hover{
+    animation: animacion ease 2s forwards;
+    
+}
+.front{
+    backface-visibility: hidden;
+}
+
+.front>#img{
+    margin-bottom: 50px;   
+}
+#img{
+    width: 80px;
+    height: 80px;
+}
+
+.back{
+    position: absolute;
+    top: 5px;
+    transform: rotateY(180deg) translateZ(100px);
+    backface-visibility: hidden;
+}
+.back>ul>li{
+    background-color: #98DDD2;
+    width: 140px;
+    margin-top: 20px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px #136C60 inset;
+}
+
+

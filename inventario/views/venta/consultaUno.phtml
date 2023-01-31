@@ -1,0 +1,24 @@
+
+<br><br><center>
+
+
+
+<table border="1"><tr><td id="titulo_tabla" colspan="9">PRODUCTO CON MAYOR STOCK</td></tr>
+    <tr aling="center">
+        <th id="titulo_tabla">NOMBRE</th>
+        <th id="titulo_tabla">REFERENCIA</th>
+        <th id="titulo_tabla">PRECIO</th>
+        <th id="titulo_tabla">CATEGORIA</th>
+        <th id="titulo_tabla">STOCK</th>
+        <th id="titulo_tabla">FECHA</th>
+    </tr>
+        <tr id="contenido_tabla">
+            <td><?php echo $this->producto['nombre']; ?></a></td>
+            <td><?php echo $this->producto['referencia']; ?></td>
+            <td align="right"><?php echo $this->producto['precio']; ?></td>
+            <td><?php echo $this->producto['categoria']; ?></td>
+            <td align="right"><?php echo $this->producto['stock']; ?></td>
+            <td><?php echo $this->producto['fechaCreacion']; ?></td>
+        </tr>
+    </table>
+</center>

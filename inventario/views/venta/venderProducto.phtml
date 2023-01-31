@@ -1,0 +1,31 @@
+<?php
+
+
+?>
+<br/>
+<center>
+    <table border="0">
+       <tr>
+            <td>
+                <form id="formu" method="post" action="">
+                    <fieldset id="frm"><legend>VENTA PRODUCTO</legend>
+                        <ol>
+                            <li><label id="titulo">NOMBRE: </label><?php echo $this->datos['nombre'];?></li>
+                            <li><label id="titulo">REFERENCIA: </label> <?php echo $this->datos['referencia'];?></li>
+                            <li><label id="titulo">PESO: </label><?php echo $this->datos['peso'];?></li>
+                            <li><label id="titulo">CATEGORIA: </label><?php echo $this->datos['categoria']; ?></li>
+                            <li><label id="titulo">PRECIO: </label><?php echo $this->datos['precio']; ?></li>
+                            <li><label id="titulo">STOCK: </label><?php echo $this->datos['stock']; ?></li>
+                            <li><label id="titulo">*CANTIDAD A VENDER: </label><input type="text" name="cantidad" value=""/></li>
+                            <input type="hidden" name="guardar" value="1"/>
+                            <input type="hidden" name="id" value="<?=$this->datos['id'];?>"/>
+                            <input type="hidden" name="stock" value="<?=$this->datos['stock'];?>"/>
+                            <input type="hidden" name="precio" value="<?=$this->datos['precio'];?>"/>
+                            <li><center><input type="submit" name="venderProducto" value="VENDER"/></center></li>
+                        </ol>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+</center>

@@ -1,0 +1,32 @@
+<?php
+
+
+?><br/><center><table border="0">
+   <tr>
+        <td>
+<form id="formu" method="post" action="">
+
+    <fieldset id="frm"><legend>NUEVO PRODUCTO</legend>
+    <ol>
+        <li><label id="titulo">*NOMBRE: </label><input type="text" name="nombre" value="<?php if(isset($this->datos['nombre'])) echo $this->datos['nombre'];?>"/></li>
+        <li><label id="titulo">*REFERENCIA: </label> <input type="text" name="referencia" value="<?php if(isset($this->datos['referencia'])) echo $this->datos['referencia'];?>"/></li>
+        <li><label id="titulo">*PRECIO: </label> <input type="text" name="precio" value="<?php if(isset($this->datos['precio'])) echo $this->datos['precio'];?>"/></li>
+         <li><label id="titulo">*PESO: </label> <input type="text" name="peso" value="<?php if(isset($this->datos['peso'])) echo $this->datos['peso'];?>"/></li>
+        <li><label id="titulo">*CATEGORIA: </label>
+            <select name="categoria">
+                <option value="">SELECCIONE CATEGORIA</option>
+                <?php for($i=0; $i<count($this->categoria); $i++): ?>
+                <option value="<?php echo $this->categoria[$i]['id']; ?>"><?php echo $this->categoria[$i]['nombre']; ?></option>
+                <?php endfor;?>
+            </select>
+        </li>
+         <li><label id="titulo">*STOCK: </label> <input type="text" name="stock" value="<?php if(isset($this->datos['stock'])) echo $this->datos['stock'];?>"/></li>
+        <input type="hidden" name="guardar" value="1"/>
+        <li><center><input type="submit" name="regProducto" value="REGISTRAR"/></center></li>
+    </ol>
+    </fieldset>   
+</form>
+    </td>
+    </tr>        
+</table></center>
+

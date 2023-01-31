@@ -1,0 +1,21 @@
+<br><br><center>
+    <table border="1"><tr><td id="titulo_tabla" colspan="9">PRODUCTO CON MAYOR VENTAS EN VALOR</td></tr>
+    <tr aling="center">
+        <th id="titulo_tabla">NOMBRE</th>
+        <th id="titulo_tabla">REFERENCIA</th>
+
+        <th id="titulo_tabla">CATEGORIA</th>
+        <th id="titulo_tabla">CANTIDAD</th>
+        <th id="titulo_tabla">PRECIO</th>
+        <th id="titulo_tabla">TOTAL</th>
+    </tr>
+        <tr id="contenido_tabla">
+            <td><?php echo $this->ventas['nombre']; ?></a></td>
+            <td><?php echo $this->ventas['referencia']; ?></td>
+            <td><?php echo $this->ventas['categoria']; ?></td>
+            <td align="right"><?php echo $this->ventas['cantidad']; ?></td>
+            <td align="right"><?php echo $this->ventas['precio']; ?></td>
+            <td><?php echo $this->ventas['total']; ?></td>
+        </tr>
+    </table>
+</center>

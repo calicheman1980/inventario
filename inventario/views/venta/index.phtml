@@ -1,0 +1,30 @@
+<?php
+
+?>
+<br><br>
+<center>
+<table border="1"><tr><td id="titulo_tabla" colspan="9">PRODUCTOS VENDIDOS</td></tr>
+   <tr aling="center">
+      <th id="titulo_tabla">VENTA N.</th>
+      <th id="titulo_tabla">PRODUCTO</th>
+      <th id="titulo_tabla">CATEGORIA</th>
+      <th id="titulo_tabla">CANTIDAD</th>
+      <th id="titulo_tabla">VALOR UNI.</th>
+      <th id="titulo_tabla">TOTAL</th>
+   </tr>
+   <?php foreach($this->ventas AS $i => $val): ?>
+
+      <tr id="contenido_tabla">
+          <td><?php echo $val['id']; ?></td>
+
+          <td><?php echo $val['nombre']; ?></td>
+          <td align="right"><?php echo $val['categoria']; ?></td>
+          <td align="right"><?php echo $val['cantidad']; ?></td>
+          <td><?php echo $val['valorUnitario']; ?></td>
+          <td align="right"><?php echo $val['valor']; ?></td>
+
+      </tr>
+        <?php endforeach; ?>
+    </table>
+</center>
+

@@ -1,0 +1,53 @@
+<br/>
+<p>
+<div id="top_menu_2">
+    <center>
+        <table width="50%">
+            <tr>
+                <td><a href="<?php BASE_URL;  ?>producto/nuevoProducto">Nuevo Producto</a></td>
+                <td><a href="<?php BASE_URL;  ?>producto/nuevaCategoria">Nueva Categoria</a></td>
+            </tr>
+        </table>
+    </center>
+</div>
+
+
+<?php if(isset($this->productos)): ?>
+<center><br><p>
+<form name="formBorrar">
+    <table border="1"><tr><td id="titulo_tabla" colspan="9">PRODUCTOS</td></tr>
+    <tr aling="center">
+        <th id="titulo_tabla">VENDER</th>
+        <th id="titulo_tabla">NOMBRE</th>
+        <th id="titulo_tabla">REFERENCIA</th>
+        <th id="titulo_tabla">PRECIO</th>
+        <th id="titulo_tabla">PESO</th>
+        <th id="titulo_tabla">CATEGORIA</th>
+        <th id="titulo_tabla">STOCK</th>
+        <th id="titulo_tabla">FECHA</th>
+        <th id="titulo_tabla">ESTADO</th>
+    </tr> 
+        <?php for($i=0; $i<count($this->productos); $i++): ?>
+
+            <tr id="contenido_tabla">
+                <td><a href="<?php echo BASE_URL. 'venta/venderProducto/'. $this->productos[$i]['id']; ?>">VENTA</a></td>
+                <td><a href="<?php echo BASE_URL. 'producto/modificarProducto/'. $this->productos[$i]['id']; ?>"><?php echo $this->productos[$i]['nombre']; ?></a></td>
+                <td><?php echo $this->productos[$i]['referencia']; ?></td>
+                <td align="right"><?php echo $this->productos[$i]['precio']; ?></td>
+                <td align="right"><?php echo $this->productos[$i]['peso']; ?></td>
+                <td><?php echo $this->productos[$i]['categoria']; ?></td>
+                <td align="right"><?php echo $this->productos[$i]['stock']; ?></td>
+                <td><?php echo $this->productos[$i]['fechaCreacion']; ?></td>
+                <td><?php echo ($this->productos[$i]['estado']==0?'Activo':'Eliminado') ?></td>
+            </tr>
+
+
+        <?php endfor; ?> 
+    </table>
+</form>
+<?php else: ?>
+<p><strong>No hay registros</strong></p>
+</p>
+</center>
+<?php endif; ?>
+

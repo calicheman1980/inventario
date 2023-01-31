@@ -1,0 +1,42 @@
+<br><br><br>
+<center>
+    <table border="0">
+        <tr>
+            <td colspan="2">
+                <form id="formu" method="post" action="<?php echo BASE_URL; ?>producto/nuevaCategoria">
+                    <fieldset id="frm"><legend>NUEVA CATEGORIA</legend>
+                        <ol>
+                            <li><label id="titulo">NOMBRE:</label>
+                                <input type="hidden" name="id" value="<?=(isset($this->datos['id'])?$this->datos['id']:'')?>">
+                                <input type="text" name="nombre" value="<?php if(isset($this->datos['nombre'])) echo $this->datos['nombre'];?>"/></li>
+                                <input type="hidden" name="guardar" value="1"/>
+                            <li>
+                                <center>
+                                    <input type="submit" name="regCategoria" value="GUARDAR"/>
+                                </center>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table><br><br>
+    <?php if(isset($this->categoria)):?>
+    <table border="1" class="tabla_datos" width="30%">
+        <tr><td id="titulo_tabla" colspan="6">CATEGORIAS</td></tr>
+        <tr><td id="titulo_tabla">Nombre</td>
+            <td id="titulo_tabla">Editar</td>
+        </tr>
+        <?php for($i=0; $i < count($this->categoria); $i++):?>
+        <tr>
+            <td><?php echo $this->categoria[$i]['nombre']; ?></td>
+            <td align="right"><a href="<?php echo BASE_URL. 'producto/nuevaCategoria/'. $this->categoria[$i]['id']; ?>">Editar</a></td>
+        </tr>
+        <?php endfor;?>
+        
+    </table>
+    <?php else: ?>
+        No hay registros
+    <?php endif; ?>
+</center>
+<br><br><br>
